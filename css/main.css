@@ -1,0 +1,179 @@
+.hidden {
+    display: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: red;
+    padding: 10px;
+}
+
+#main-logo {
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 3px 3px 5px rgba(0,0,0,.3);
+}
+
+#character_nav {
+    background-color: #675050;
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.characters {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.characters li {
+    height: 220px;
+    margin: 10px 8px;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 155px 0 brown inset;
+    transition:box-shadow .2s ease;
+}
+
+.characters li a {
+    text-decoration: none;
+}
+
+.characters li:hover {
+    box-shadow: 0 220px 0 rgb(225,0,0)inset;
+}
+
+.characters li h5 {
+    color: #fff;
+    padding: 12px 8px;
+}
+
+article, #instruction {
+    padding: 20px;
+}
+
+article h3, #instruction h3 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom:14px;
+}
+
+article p, #instruction p{
+    font-size: 18px;
+    text-align: center;
+}
+
+.sprite {
+    width: 150px;
+    height: 150px;
+    background-image: url('../images/stangesprites.jpg');
+}
+
+#mike {background-position: -150px 0;}
+#will{background-position: -300px 0;}
+#max {background-position: -450px 0;}
+#lucas {background-position: -600px 0;}
+#dustin {background-position: -750px 0;}
+
+
+#eleven:hover, #mike:hover, #will:hover, #max:hover, #lucus:hover, #dustin:hover {
+    background-position-y: -150px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px ;
+}
+
+.sticky_footer{
+    height: 80px;
+    background-color: rgb(40,37,37);
+    position: sticky;
+    top: 100%;
+}
+.lightbox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height:100vw;
+    background-color: rgba(0,0,0,.85);
+    background-image: url('../images/eleven_png.png');
+    background-repeat: no-repeat;
+    background-size: 40vh;
+    background-position: 10px top;
+    display: none;
+}
+
+#lightbox2{
+    background-image: url('../images/mike-wheeler-png.png');
+}
+
+#lightbox3{
+    background-image: url('../images/will_png.png');
+}
+
+#lightbox4{
+    background-image: url('../images/max_png.png');
+}
+
+#lightbox5{
+    background-image: url('../images/lucas_png.png');
+}
+
+#lightbox6{
+    background-image: url('../images/dustin-png.png');
+}
+
+.lightbox_close {
+    position: absolute;
+    top: 20px;
+    right: 5%;
+
+    color: white;
+    font-size: 36px;
+
+    text-decoration: none;
+    font-weight: bolder;
+
+    transition: all .5s ease-in-out;
+}
+
+.lightbox_close:hover {
+    opacity: 0.5;
+    color: red;
+}
+
+.lightbox article {
+    width: 55%;
+    margin-left: 40%;
+    padding-top: 100px;
+}
+
+.lb_text, .lb_heading {
+    text-align: left;
+}
+
+.lb_text {
+    line-height: 26px;
+}
+
+.lightbox:target {
+    display: block;
+}
